@@ -8,7 +8,7 @@ terraform {
 
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.58.0"
+      version = "~> 5.0"
     }
   }
 }
@@ -18,5 +18,5 @@ provider "aws" {
 }
 
 provider "databricks" {
-  host     = "https://accounts.cloud.databricks.com"
+  host = "https://accounts.cloud.databricks.com"
 }

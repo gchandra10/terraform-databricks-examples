@@ -1,13 +1,19 @@
-
-# Step 1: Initializing configs and variables 
 variable "tags" {
-  type        = map(any)
-  description = "(Optional) List of tags to be propagated accross all assets in this demo"
+  default     = {}
+  type        = map(string)
+  description = "(Optional) Optional tags to add to created resources"
+}
+
+variable "workspace_name" {
+  type        = string
+  default     = ""
+  description = "(Optional) Workspace Name for this module - if none are provided, the prefix will be used to name the workspace via coalesce()"
 }
 
 variable "prefix" {
+  default     = "demo"
   type        = string
-  description = "(Optional) Prefix to name the resources created by this module"
+  description = "(Optional) Prefix for use in the generated names"
 }
 
 variable "region" {
